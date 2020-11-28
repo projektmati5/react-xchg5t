@@ -4,10 +4,18 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 
+function MojKomponent() {
+  return (
+    <div>
+      <h1>Witaj, świecie!</h1>
+      <h2>Jestem ambitna/y, więc przerabiam kurs React.js komporent!</h2>
+    </div>
+  );
+}
+
+
+
 ReactDOM.render(
-  <div>
-    <h1>Witaj, świecie!</h1>
-    <h2>Jestem ambitna/y, więc przerabiam kurs React.js!</h2>
-  </div>,
+ <MojKomponent />,
   document.getElementById('app')
 );
