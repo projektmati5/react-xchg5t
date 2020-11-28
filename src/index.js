@@ -4,40 +4,79 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 
-function MojKomponent() {
+function AppHeader() {
   return (
-    <div>
-      <h1>Witaj, świecie!</h1>
-      <h2>Jestem ambitna/y, więc przerabiam kurs React.js komporent!3</h2>
-    </div>
+    <header className="ui fixed menu">
+      <nav className="ui container">
+        <a href="#" className="header item">
+          <img
+            className="logo"
+            src="https://typeofweb.com/wp-content/uploads/2017/08/cropped-typeofweb_logo-04-white-smaller-1-e1504359870362.png"
+          />
+          Lista kontaktów
+        </a>
+        <div className="header item">
+          <button className="ui button">Dodaj</button>
+        </div>
+      </nav>
+    </header>
   );
 }
 
-function MojKomponent2() {
+function ContactsList() {
   return (
-    <div>
-      <dialog open>
-        <h1>Tytuł</h1>
-        <p>Treść</p>
-      </dialog>
-    </div>
+    <ul className="ui relaxed divided list selection">
+      <ContactItem
+        login="typeofweb1"
+        name="Lena"
+        department="JavaScript Developer"
+      />
+      <ContactItem
+        login="typeofweb2"
+        name="Brian"
+        department="Human Resources"
+      />
+      <ContactItem
+        login="typeofweb3"
+        name="Rick"
+        department="QA"
+      />
+    </ul>
   );
 }
 
-function MojKomponent3({ title="ac", content }) {
+function ContactItem({ login, name, department }) {
+  const imgUrl = `https://api.adorable.io/avatars/55/${login}.png`;
+  return (
+    <li className="item">
+      <img src={imgUrl} className="ui mini rounded image" />
+      <div className="content">
+        <h4 className="header">{name}</h4>
+        <div className="description">{department}</div>
+      </div>
+    </li>
+  );
+}
+
+function App() {
   return (
     <div>
-      <dialog open>
-        <h1>{title}</h1>
-        <p>{content}</p>
-      </dialog>
+      <AppHeader />
+      <main className="ui main text container">
+        <ContactsList />
+      </main>
     </div>
   );
 }
+ReactDOM.render(<App />, document.getElementById("app"));
+
+
+
+
 
 
 
 ReactDOM.render(
- <MojKomponent3 content="b"/>,
+ <App/>,
   document.getElementById('app')
 );
