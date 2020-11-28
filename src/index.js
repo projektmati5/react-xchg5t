@@ -54,10 +54,10 @@ function ContactsList() {
 }
 
 function ContactItem({ login, name, department }) {
-  const imgUrl = `https://api.adorable.io/avatars/55/${login}.png`;
+  const imgUrl = 'https://typeofweb.com/wp-content/uploads/2017/08/cropped-typeofweb_logo-04-white-smaller-1-e1504359870362.png';
   return (
     <li className="item">
-      <img src={imgUrl} className="ui mini rounded image" />
+      <img src={'https://upload.wikimedia.org/wikipedia/en/8/80/Wikipedia-logo-v2.svg'} className="ui mini rounded image" />
       <div className="content">
         <h4 className="header">{name}</h4>
         <div className="description">{department}</div>
