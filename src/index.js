@@ -41,6 +41,14 @@ function ContactsList() {
         name="Rick"
         department="QA"
       />
+
+<ContactItem
+        login="typeofweb4"
+        name="Rick"
+        department="QA"
+      />
+
+
     </ul>
   );
 }
