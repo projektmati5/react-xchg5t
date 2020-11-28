@@ -24,11 +24,20 @@ function MojKomponent2() {
   );
 }
 
-
+function MojKomponent3({ title, content }) {
+  return (
+    <div>
+      <dialog open>
+        <h1>{title}</h1>
+        <p>{content}</p>
+      </dialog>
+    </div>
+  );
+}
 
 
 
 ReactDOM.render(
- <MojKomponent2/>,
+ <MojKomponent3 title="aa" content="b"/>,
   document.getElementById('app')
 );
