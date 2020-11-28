@@ -5,9 +5,9 @@ import App from "./App";
 
 
 ReactDOM.render(
-  <h1>Witaj, świecie!</h1>,
+  <div>
+    <h1>Witaj, świecie!</h1>
+    <h2>Jestem ambitna/y, więc przerabiam kurs React.js!</h2>
+  </div>,
   document.getElementById('app')
 );
-
-
-//ReactDOM.render(<App />, document.getElementById("root"));
