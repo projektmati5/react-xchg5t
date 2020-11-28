@@ -24,7 +24,7 @@ function MojKomponent2() {
   );
 }
 
-function MojKomponent3({ title, content }) {
+function MojKomponent3({ title="ac", content }) {
   return (
     <div>
       <dialog open>
@@ -38,6 +38,6 @@ function MojKomponent3({ title, content }) {
 
 
 ReactDOM.render(
- <MojKomponent3 title="aa" content="b"/>,
+ <MojKomponent3 content="b"/>,
   document.getElementById('app')
 );
