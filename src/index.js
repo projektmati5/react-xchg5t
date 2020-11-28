@@ -13,9 +13,22 @@ function MojKomponent() {
   );
 }
 
+function MojKomponent2() {
+  return (
+    <div>
+      <dialog open>
+        <h1>Tytuł</h1>
+        <p>Treść</p>
+      </dialog>
+    </div>
+  );
+}
+
+
+
 
 
 ReactDOM.render(
- <MojKomponent />,
+ <MojKomponent2/>,
   document.getElementById('app')
 );
