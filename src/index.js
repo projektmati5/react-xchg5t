@@ -94,12 +94,12 @@ class MyForm extends React.Component {
   }
 }
 
-function App() {
+function Appe() {
   return (
     <button onClick={() => alert('Kliknięto!')}>Kliknij!</button>
   );
 }
-ReactDOM.render(<App />, document.getElementById("app"));
+
 
 function onClickHandler() {
   alert('Kliknięto!');
@@ -110,6 +110,14 @@ function MyComponent() {
   );
 }
 
+class App extends React.Component {
+  render() {
+    return <button onClick={this.onClickHandler}>Kliknij!</button>;
+  }
+  onClickHandler() {
+    alert("Kliknięto!");
+  }
+}
 
 
 
