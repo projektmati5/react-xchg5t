@@ -20,7 +20,7 @@ class App extends React.Component {
 
       
       <div>
-        <button onClick={this.increment}>+</button>
+        <button onClick={this.increment.bind(this)}>+</button>
         <output>{this.state.counter}</output>
         <button>-</button>
       </div>
