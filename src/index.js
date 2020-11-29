@@ -82,15 +82,34 @@ class ContactItem extends React.Component {
   }
 }
 
+class MyForm extends React.Component {
+  render() {
+    return (
+      <Input name="nip" validate={[this.validateInput]} />
+    )
+  }
 
-
+  validateInput(value) {
+    return value && value.length === 10;
+  }
+}
 
 function App() {
+  return (
+    <button onClick={() => alert('Kliknięto!')}>Kliknij!</button>
+  );
+}
+ReactDOM.render(<App />, document.getElementById("app"));
+
+
+
+function Appe() {
   return (
     <div>
       <AppHeader />
       <main className="ui main text container">
         <ContactsList />
+        
       </main>
     </div>
   );
