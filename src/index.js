@@ -18,6 +18,14 @@ render()
 {return(null);
 }
 
+
+increment()
+{
+  return(
+    <button onClick={this.}
+}
+
+
 }
 
 
