@@ -101,6 +101,16 @@ function App() {
 }
 ReactDOM.render(<App />, document.getElementById("app"));
 
+function onClickHandler() {
+  alert('Kliknięto!');
+}
+function MyComponent() {
+  return (
+    <button onClick={onClickHandler}>Kliknij!</button>
+  );
+}
+
+
 
 
 function Appe() {
