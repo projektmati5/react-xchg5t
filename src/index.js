@@ -15,14 +15,28 @@ this.state={
 };
 
 render()
-{return(null);
+{return(
+  <div><button onClick={this.increment.bind(this)}>+</button>
+   <output>Suma: {this.state.sumCount}</output></div>
+
+
+
+
+);
+
+
 }
 
 
 increment()
 {
-  return(
-    <button onClick={this.}
+  this.setState(
+    {
+      sumCount:this.state.sumCount+1,
+      totalCount:this.state.totalCount+1
+      }
+      )
+   
 }
 
 
