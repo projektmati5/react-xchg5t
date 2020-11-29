@@ -53,7 +53,7 @@ function ContactsList() {
   );
 }
 
-function ContactItem({ login, name, department }) {
+function ContactIteme({ login, name, department }) {
   const imgUrl = 'https://typeofweb.com/wp-content/uploads/2017/08/cropped-typeofweb_logo-04-white-smaller-1-e1504359870362.png';
   return (
     <li className="item">
@@ -65,6 +65,25 @@ function ContactItem({ login, name, department }) {
     </li>
   );
 }
+
+class ContactItem extends React.Component {
+  render() {
+    const { login, name, department } = this.props
+    const imgUrl = `https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg`;
+    return (
+      <li className="item">
+        <img src={imgUrl} className="ui mini rounded image" />
+        <div className="content">
+          <h4 className="header">{name}</h4>
+          <div className="description">{department}</div>
+        </div>
+      </li>
+    );
+  }
+}
+
+
+
 
 function App() {
   return (
